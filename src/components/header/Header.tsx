@@ -5,7 +5,6 @@ import Link from "next/link";
 import React from "react";
 import Container from "../Container";
 import SocialLinks from "../SocialLinks";
-import { IoMdMenu } from "react-icons/io";
 
 const Header = () => {
   return (
