@@ -25,3 +25,41 @@ export const NavArray = [
     href: "/contact",
   },
 ];
+
+export const companyArray = [
+  {
+    title: "Who We Are",
+    href: "/",
+  },
+  {
+    title: "About Company",
+    href: "/",
+  },
+  {
+    title: "Services We Provide",
+    href: "/",
+  },
+  {
+    title: "What We Have Done",
+    href: "/",
+  },
+];
+
+export const servicesArray = [
+  {
+    title: "Architecture",
+    href: "/services",
+  },
+  {
+    title: "Exterior Design",
+    href: "/services",
+  },
+  {
+    title: "Landscape Design",
+    href: "/services",
+  },
+  {
+    title: "Site Planning",
+    href: "/services",
+  },
+];

@@ -33,7 +33,7 @@ const SocialLinks = () => {
           key={item?._id}
           href={item?.href}
           target="blank"
-          className="w-8 h-8 flex items-center justify-center rounded-full bg-black/80
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-600
           text-white hover:bg-orange-500 duration-300"
         >
           {item?.icons}

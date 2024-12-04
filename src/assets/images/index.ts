@@ -1,2 +1,3 @@
 import logo from "@/assets/images/logo.png";
-export { logo };
+import footerLogo from "@/assets/images/footerLogo.png";
+export { logo, footerLogo };
