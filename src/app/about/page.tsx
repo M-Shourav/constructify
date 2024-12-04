@@ -1,3 +1,4 @@
+"use client";
 import { storyImage } from "@/assets/images";
 import Container from "@/components/Container";
 import Offers from "@/components/Offers";
@@ -7,6 +8,7 @@ import TopFooter from "@/components/TopFooter";
 import Image from "next/image";
 import React from "react";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
+import { motion } from "framer-motion";
 
 const AboutPage = () => {
   return (
@@ -14,16 +16,26 @@ const AboutPage = () => {
       <Container className="py-10 md:py-20">
         <div className="py-10 grid grid-cols-1 lg:grid-cols-2  items-start justify-between gap-10 md:gap-20">
           <div className="w-full h-full p-6">
-            <div className="w-full h-full border-4 border-orange-500 ">
+            <motion.div
+              initial={{ y: 40, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="w-full h-full border-4 border-orange-500 "
+            >
               <Image
                 src={storyImage}
                 alt="aboutImage"
                 className="w-full h-full -mx-6 -mt-8"
               />
-            </div>
+            </motion.div>
           </div>
           {/* description */}
-          <div className="flex flex-col gap-5">
+          <motion.div
+            initial={{ x: -40, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col gap-5"
+          >
             <Title className="text-xl md:text-4xl max-w-[450px] ">
               Our Story
             </Title>
@@ -66,7 +78,7 @@ const AboutPage = () => {
                 24/7 Assistant
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
         {/* offers  */}
         <Offers />

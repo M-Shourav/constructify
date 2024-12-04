@@ -3,7 +3,6 @@ import RecentProjects from "@/components/RecentProjects";
 import Title from "@/components/Title";
 import TopFooter from "@/components/TopFooter";
 import React from "react";
-
 const ProjectPage = () => {
   return (
     <>

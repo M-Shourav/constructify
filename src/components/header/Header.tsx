@@ -41,7 +41,13 @@ const Header = () => {
               <div className="w-0 h-[2px] bg-black group-hover:w-full duration-500" />
             </Link>
           ))}
-          <SocialLinks />
+          <motion.div
+            initial={{ y: 10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.9 }}
+          >
+            <SocialLinks />
+          </motion.div>
         </div>
         {/* menuBar */}
         {/* <div className="inline-flex items-center  md:hidden ">

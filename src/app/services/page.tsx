@@ -1,3 +1,4 @@
+"use client";
 import Container from "@/components/Container";
 import Title from "@/components/Title";
 import TopFooter from "@/components/TopFooter";
@@ -7,12 +8,16 @@ import { FaRegSquare } from "react-icons/fa";
 import { MdOutlineAddToPhotos } from "react-icons/md";
 import { RiLandscapeLine } from "react-icons/ri";
 import { SiAntdesign, SiMaterialdesignicons } from "react-icons/si";
-
+import { motion } from "framer-motion";
 const ServicePage = () => {
   return (
     <>
       <Container className="py-10 md:py-20 flex flex-col gap-7">
-        <div>
+        <motion.div
+          initial={{ y: 40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        >
           <Title className="md:text-4xl">Our Services</Title>
           <span className="w-20 h-[4px] bg-orange-600 inline-block" />
           <p className="max-w-[500px] text-sm md:text-lg text-gray-500 tracking-wider">
@@ -20,9 +25,14 @@ const ServicePage = () => {
             these paragraphs to focus on the topic you want. Make sure you keep
             it short and attractive.
           </p>
-        </div>
+        </motion.div>
         {/* services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-5 md:gap-10">
+        <motion.div
+          initial={{ x: 40, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center gap-5 md:gap-10"
+        >
           <div className="flex flex-col gap-y-3">
             <p className="text-base md:text-2xl text-orange-500 font-semibold">
               0.1
@@ -71,7 +81,7 @@ const ServicePage = () => {
               Distinctio eius unde quas laboriosam tempore.
             </p>
           </div>
-        </div>
+        </motion.div>
         {/* specialization */}
         <div className="flex flex-col gap-5 md:gap-10 items-start">
           <div className="flex flex-col gap-y-5 items-start">

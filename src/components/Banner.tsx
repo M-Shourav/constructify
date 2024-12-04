@@ -1,9 +1,10 @@
+"use client";
 import { bannerImage } from "@/assets/images";
 import Image from "next/image";
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Button from "./ui/Button";
-
+import { motion } from "framer-motion";
 const Banner = () => {
   return (
     <div className="w-full h-full relative">
@@ -13,11 +14,14 @@ const Banner = () => {
         className="w-full h-full object-cover"
       />
       <div className="w-full h-full bg-black bg-opacity-35 absolute top-0 left-0">
-        <div
+        <motion.div
+          initial={{ y: 40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
           className="px-8 flex flex-col gap-3 md:gap-5 items-start justify-between 
             py-5 md:py-10 text-white"
         >
-          <h2 className="text-lg md:text-6xl font-semibold max-w-[400px]">
+          <h2 className="text-lg lg:text-6xl font-semibold max-w-[400px]">
             Broad Vision Honest Service Great Value
           </h2>
           <p className="text-sm md:text-base">
@@ -38,7 +42,7 @@ const Banner = () => {
               Get In Touch
             </Button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

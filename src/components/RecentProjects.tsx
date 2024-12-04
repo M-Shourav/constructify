@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import {
   profileImg_2,
   profileImg_3,
@@ -24,7 +26,12 @@ const RecentProjects = () => {
               alt="project_3"
               className=" h-full object-cover absolute -top-10 -left-4"
             />
-            <div className="w-full flex flex-col gap-4  justify-center px-8 h-[200px] bg-white absolute bottom-0 left-0">
+            <motion.div
+              initial={{ x: 40, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="w-full flex flex-col gap-4  justify-center px-8 h-[200px] bg-white absolute bottom-0 left-0"
+            >
               <p className="text-base font-semibold text-gray-500">
                 Lorem lacus reiciendis illo placerat tempus temporibus deserunt
                 commodo incidunt error unde. Facilisis aspernatur. Recusandae
@@ -45,11 +52,16 @@ const RecentProjects = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         {/* description */}
-        <div className="flex flex-col gap-y-5 items-start">
+        <motion.div
+          initial={{ y: 40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col gap-y-5 items-start"
+        >
           <p className="text-sm font-semibold text-gray-800">
             Commercial Properties
           </p>
@@ -88,7 +100,7 @@ const RecentProjects = () => {
           >
             <IoIosArrowRoundForward className="mt-1 text-xl" /> Visit Project
           </Button>
-        </div>
+        </motion.div>
       </div>
       {/* second project */}
       <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 items-center gap-10">

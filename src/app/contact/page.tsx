@@ -1,10 +1,11 @@
+"use client";
 import ContactLeft from "@/components/ContactLeft";
 import ContactRight from "@/components/ContactRight";
 import Container from "@/components/Container";
 import SocialLinks from "@/components/SocialLinks";
 import Title from "@/components/Title";
 import React from "react";
-
+import { motion } from "framer-motion";
 const ContactPage = () => {
   return (
     <Container className="py-10 md:py-20 flex flex-col gap-10">
@@ -18,11 +19,19 @@ const ContactPage = () => {
         </p>
       </div>
       <div className="w-full h-full flex flex-col md:flex-row  gap-5">
-        <div className="bg-gray-300 w-full h-full p-6 flex flex-col gap-10">
+        <motion.div
+          initial={{ y: 40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="bg-gray-300 w-full h-full p-6 flex flex-col gap-10"
+        >
           <Title className="md:text-3xl">Send Us A Message</Title>
           <ContactLeft />
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          initial={{ x: 40, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
           className=" bg-gray-100 border border-gray-200 w-full h-full p-6
          flex flex-col gap-10"
         >
@@ -30,7 +39,7 @@ const ContactPage = () => {
           <ContactRight />
           <Title className="md:text-3xl">Follow US</Title>
           <SocialLinks />
-        </div>
+        </motion.div>
       </div>
     </Container>
   );
