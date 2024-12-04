@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <div className="w-full h-20 mx-auto bg-white shadow-md">
       <Container className="w-full h-full flex items-center justify-between gap-7">
-        <Link href={"/"} className="w-full ">
+        <Link href={"/"}>
           <Image
             src={logo}
             alt="logo"
