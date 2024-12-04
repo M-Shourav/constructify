@@ -1,5 +1,8 @@
 import {
   bannerImage1,
+  offerImage_1,
+  offerImage_2,
+  offerImage_3,
   project_1,
   project_2,
   project_3,
@@ -14,26 +17,31 @@ export const NavArray = [
     _id: "001",
     title: "Home",
     href: "/",
+    duration: 0.1,
   },
   {
     _id: "002",
     title: "About",
     href: "/about",
+    duration: 0.3,
   },
   {
     _id: "003",
     title: "Services",
     href: "/services",
+    duration: 0.5,
   },
   {
     _id: "004",
     title: "Projects",
     href: "/projects",
+    duration: 0.7,
   },
   {
     _id: "005",
     title: "Contact",
     href: "/contact",
+    duration: 0.9,
   },
 ];
 
@@ -121,5 +129,23 @@ export const teamArray = [
     title: "Creative director",
     images: team_3,
     del: 0.4,
+  },
+];
+
+export const offerArray = [
+  {
+    title: "We Understand Requirements",
+    images: offerImage_1,
+    des: "Sed sit amet sapien sit amet odio lobortis ullamcorper quis vel nisl. Nam blandit maximus tristique.",
+  },
+  {
+    title: "We Work Precisely",
+    images: offerImage_2,
+    des: "Sed sit amet sapien sit amet odio lobortis ullamcorper quis vel nisl. Nam blandit maximus tristique.",
+  },
+  {
+    title: "We Deliver Best Output",
+    images: offerImage_3,
+    des: "Sed sit amet sapien sit amet odio lobortis ullamcorper quis vel nisl. Nam blandit maximus tristique.",
   },
 ];
