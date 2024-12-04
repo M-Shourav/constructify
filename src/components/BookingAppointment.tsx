@@ -4,6 +4,7 @@ import Container from "./Container";
 import Title from "./Title";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { appointmentImg } from "@/assets/images";
+import Button from "./ui/Button";
 
 const BookingAppointment = () => {
   return (
@@ -28,14 +29,14 @@ const BookingAppointment = () => {
             maxime consequatur eum omnis. Rerum natus necessitatibus ratione
             suscipit iste, eveniet nihil!
           </p>
-          <button
+          <Button
             className="text-xs text-white md:text-base font-semibold bg-orange-500 border border-transparent
-      flex items-center justify-center gap-1 px-4 py-3 rounded-sm hover:bg-black
-      hover:text-white duration-300 ease-in-out hover:border-green-300"
+             flex items-center justify-center gap-1 px-4 py-3 rounded-sm hover:bg-black
+           hover:text-white duration-300 ease-in-out hover:border-green-300"
           >
             <IoIosArrowRoundForward className="mt-1 text-xl" /> Book An
             Appointment
-          </button>
+          </Button>
         </Container>
       </div>
     </div>
