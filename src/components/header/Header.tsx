@@ -3,11 +3,12 @@ import { logo } from "@/assets/images";
 import { NavArray } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import Container from "../Container";
 import SocialLinks from "../SocialLinks";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import MobileNavigation from "../MobileNavigation";
 
 const Header = () => {
   const pathName = usePathname();
@@ -21,7 +22,7 @@ const Header = () => {
             className="w-24 h-16 border-2 border-transparent hover:border-orange-500 duration-300"
           />
         </Link>
-        <div className=" hidden md:inline-flex items-center gap-7">
+        <div className=" hidden lg:inline-flex items-center gap-7">
           {NavArray?.map((item) => (
             <Link
               key={item?._id}
@@ -50,9 +51,9 @@ const Header = () => {
           </motion.div>
         </div>
         {/* menuBar */}
-        {/* <div className="inline-flex items-center  md:hidden ">
-          <IoMdMenu />
-        </div> */}
+        <div className="inline-flex lg:hidden items-center   ">
+          <MobileNavigation />
+        </div>
       </Container>
     </div>
   );
