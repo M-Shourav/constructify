@@ -3,7 +3,6 @@ import { logo } from "@/assets/images";
 import { NavArray } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
 import Container from "../Container";
 import SocialLinks from "../SocialLinks";
 import { usePathname } from "next/navigation";
