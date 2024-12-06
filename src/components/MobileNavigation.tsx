@@ -8,9 +8,8 @@ import SocialLinks from "./SocialLinks";
 
 const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const handleHamburger = (e: any) => {
+  const handleHamburger = () => {
     setIsOpen(!isOpen);
-    console.log(e);
   };
   useEffect(() => {
     if (isOpen) {
