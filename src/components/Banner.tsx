@@ -1,11 +1,16 @@
 "use client";
 import { bannerImage } from "@/assets/images";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Button from "./ui/Button";
-import { motion } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const Banner = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full h-full relative">
       <Image
@@ -14,10 +19,8 @@ const Banner = () => {
         className="w-full h-full object-cover"
       />
       <div className="w-full h-full bg-black bg-opacity-35 absolute top-0 left-0">
-        <motion.div
-          initial={{ y: 40, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
+        <div
+          data-aos="fade-up"
           className="px-8 flex flex-col gap-3 md:gap-5 items-start justify-center 
             py-5 md:py-10 text-white mb-2 md:mb-0 absolute md:top-20 md:left-0"
         >
@@ -45,7 +48,7 @@ const Banner = () => {
               Get In Touch
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );
