@@ -37,7 +37,10 @@ const Offers = () => {
               <Title>{item?.title}</Title>
               <p className="text-base font-normal text-gray-500">{item?.des}</p>
               <Link
-                href={"/"}
+                href={{
+                  pathname: `/projects/${item?._id}`,
+                  query: { id: item?._id },
+                }}
                 className="w-fit flex items-center gap-2 text-orange-500 hover:text-gray-600 duration-300"
               >
                 <span>

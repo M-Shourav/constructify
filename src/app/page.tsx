@@ -1,6 +1,7 @@
 import Banner from "@/components/Banner";
 import BookingAppointment from "@/components/BookingAppointment";
 import Counter from "@/components/Counter";
+import Mainloader from "@/components/Mainloader";
 import OurDream from "@/components/OurDream";
 import OurSpecialization from "@/components/OurSpecialization";
 import Project from "@/components/Project";

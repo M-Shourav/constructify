@@ -134,16 +134,19 @@ export const teamArray = [
 
 export const offerArray = [
   {
+    _id: "1",
     title: "We Understand Requirements",
     images: offerImage_1,
     des: "Sed sit amet sapien sit amet odio lobortis ullamcorper quis vel nisl. Nam blandit maximus tristique.",
   },
   {
+    _id: "2",
     title: "We Work Precisely",
     images: offerImage_2,
     des: "Sed sit amet sapien sit amet odio lobortis ullamcorper quis vel nisl. Nam blandit maximus tristique.",
   },
   {
+    _id: "3",
     title: "We Deliver Best Output",
     images: offerImage_3,
     des: "Sed sit amet sapien sit amet odio lobortis ullamcorper quis vel nisl. Nam blandit maximus tristique.",
