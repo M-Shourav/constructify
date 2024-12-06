@@ -50,7 +50,7 @@ const Header = () => {
           </motion.div>
         </div>
         {/* menuBar */}
-        <div className="inline-flex lg:hidden items-center   ">
+        <div className="inline-flex lg:hidden items-center">
           <MobileNavigation />
         </div>
       </Container>
